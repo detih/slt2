@@ -1,0 +1,25 @@
+{
+  "name": "SLT1",
+  "description": "Бот позволяет получать и отправлять сообщения VK находясь в Telegram",
+  "repository": "https://github.com/detih/slt1/",
+  "keywords": ["vk", "bot", "telegram"],
+  "website": "https://github.com/detih/slt1/",
+  "buildpacks":[
+   {
+    "url": "heroku/python"
+   }
+  ],
+  },
+ "addons": [
+    {
+      "plan": "heroku-redis:hobby-dev",
+      "as": "Redis"
+    }
+  ],
+"formation": {
+    "bot": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
